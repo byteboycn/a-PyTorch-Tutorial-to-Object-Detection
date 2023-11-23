@@ -99,7 +99,7 @@ class VGGBase(nn.Module):
         param_names = list(state_dict.keys())
 
         # Pretrained VGG base
-        pretrained_state_dict = torchvision.models.vgg16(torchvision.models.VGG16_Weights.IMAGENET1K_V1).state_dict()
+        pretrained_state_dict = torchvision.models.vgg16(weights=torchvision.models.VGG16_Weights.IMAGENET1K_V1).state_dict()
         pretrained_param_names = list(pretrained_state_dict.keys())
 
         # Transfer conv. parameters from pretrained model to current model
